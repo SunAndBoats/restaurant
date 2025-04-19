@@ -1,0 +1,129 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fuente general */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Nav */
+  /* Header con fondo moderno */
+header {
+    background: linear-gradient(90deg, #1e1e2f, #3c3c5c);
+    padding: 20px 0;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  /* Navbar estilizada */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Botones de navegación */
+  nav button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Efecto hover tipo botón futurista */
+  nav button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    transition: left 0.3s ease;
+    z-index: 0;
+  }
+  
+  nav button:hover::before {
+    left: 0;
+  }
+  
+  nav button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    border-color: #ffca28;
+  }
+  
+  /* Botón activo (si quieres cambiar color activo después) */
+  nav button.active {
+    background-color: #ffca28;
+    color: #333;
+    border-color: #ffca28;
+    font-weight: bold;
+  }
+  
+  
+  /* Contenido general */
+  #content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Título del menú */
+  .menu h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #222;
+  }
+  
+  /* Lista de platos */
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Cada plato */
+  .menu-item {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .menu-item h3 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 8px;
+  }
+  
+  .menu-item .description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 6px;
+  }
+  
+  .menu-item .price {
+    font-weight: bold;
+    color: #008000;
+    font-size: 18px;
+  }
+  
